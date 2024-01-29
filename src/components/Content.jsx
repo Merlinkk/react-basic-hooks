@@ -1,13 +1,17 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 
 function Content() {
 
     const [show, setShow] = useState(true)
 
     function toggleContent(){
-        alert("Content Button Clicked!")
         setShow(!show)
     }
+
+    useEffect(()=>{
+      alert("Content Button Clicked!")    
+    },[show])
+
 
   return (
     <>
